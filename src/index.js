@@ -16,10 +16,9 @@ const PINCH_RELEASE_THROW_DELAY = 300
 const WARNING_DISPLAY_TIMEOUT = 300
 
 const NOOP = () => {}
-
+// https://b.tile.openstreetmap.org/12/1969/1636.png
 function wikimedia (x, y, z, dpr) {
-  const retina = typeof dpr !== 'undefined' ? dpr >= 2 : (typeof window !== 'undefined' && window.devicePixelRatio >= 2)
-  return `https://maps.wikimedia.org/osm-intl/${z}/${x}/${y}${retina ? '@2x' : ''}.png`
+  return `https://b.tile.openstreetmap.org/${z}/${x}/${y}.png`
 }
 
 // https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames
